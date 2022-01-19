@@ -24,6 +24,6 @@ jobs:
       run: npm run dev-setup
 
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      run: chmod +x template/android/gradlew
     - name: Build with Gradle
       run: cd template && cd android && ./gradlew assembleDebug
