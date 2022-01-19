@@ -26,4 +26,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x template/android/gradlew
     - name: Build with Gradle
-      run: cd template && cd android && ./gradlew assembleDebug --info
+      run: cd template && ls
+      
+    - name: cleanup node_modules
+      run: cd template && rm -rf template/node_modules
