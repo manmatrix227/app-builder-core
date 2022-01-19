@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: macos-11
+    runs-on: windows-2016
 
     steps:
     - uses: actions/checkout@v2
@@ -26,10 +26,5 @@ jobs:
     - name: run dev set up
       run: npm run dev-setup
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x template/android/gradlew
-    - name: Build with Gradle
+    - name: Build Android apk with Gradle
       run: cd template && cd android && ./gradlew clean assembleDebug
-      
-    - name: cleanup node_modules
-      run: cd template && ls
